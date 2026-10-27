@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>Website Health Check: Joe&#x27;s Plumbing</title>
+<style>
+ body{font-family:Helvetica,Arial,sans-serif;color:#1d2939;max-width:760px;margin:32px auto;padding:0 20px;line-height:1.45}
+ h1{font-size:24px;margin:0 0 4px} .muted{color:#667085;font-size:13px}
+ .grade{display:flex;align-items:center;gap:16px;margin:20px 0;padding:16px;border:1px solid #e4e7ec;border-radius:10px}
+ .letter{font-size:44px;font-weight:700;color:#1f3a5f;width:64px;text-align:center}
+ table{width:100%;border-collapse:collapse;margin:12px 0;font-size:14px}
+ th,td{text-align:left;vertical-align:top;padding:8px;border-bottom:1px solid #e4e7ec}
+ th{width:34%;color:#475467;font-weight:600}
+ .sev{color:#fff;font-size:11px;font-weight:700;padding:2px 6px;border-radius:4px}
+ .cta{margin-top:20px;padding:14px;background:#f2f6fc;border-radius:8px}
+ .fine{font-size:12px;color:#667085;margin-top:24px}
+</style></head><body>
+<h1>Website Health Check: Joe&#x27;s Plumbing</h1>
+<div class="muted">Checked 2026-10-27 &middot; public information only</div>
+<div class="grade"><div class="letter">F</div>
+<div><strong>Score: 8/100</strong><br><span class="muted">7 item(s) worth attention</span></div></div>
+<table><tr><th>Website</th><td>https://joesplumbing.example/</td></tr><tr><th>Runs WordPress</th><td>Yes</td></tr><tr><th>WordPress version</th><td>6.4.2 (latest: 7.1.2)</td></tr><tr><th>PHP version (shown publicly)</th><td>7.4.33</td></tr><tr><th>SSL certificate</th><td>valid, 9 days left</td></tr><tr><th>Plugins visible in page code</th><td>contact-form-7, woocommerce</td></tr></table>
+<h2 style="font-size:18px">What we found</h2>
+<table><tr><th style="width:12%">Level</th><th style="width:50%">Issue and what it means</th><th>How to fix it</th></tr><tr><td><span class='sev' style='background:#c4320a'>HIGH</span></td><td><strong>WordPress is out of date (6.4.2; current is 7.1.2)</strong><br><span class='muted'>Older WordPress versions have publicly known security holes that attackers scan for automatically.</span></td><td>Update WordPress core after taking a full backup and testing on a staging copy.</td></tr><tr><td><span class='sev' style='background:#c4320a'>HIGH</span></td><td><strong>Server runs PHP 7.4.33, which no longer gets security fixes</strong><br><span class='muted'>The language the site runs on is past end of life, so new security holes will never be patched.</span></td><td>Upgrade PHP in the hosting control panel after testing the site on the new version.</td></tr><tr><td><span class='sev' style='background:#c4320a'>HIGH</span></td><td><strong>No DMARC record: anyone can send email pretending to be this business</strong><br><span class='muted'>Scammers can send fake invoices or payment requests that look like they came from you.</span></td><td>Publish a DMARC record (start in monitoring mode, then move to blocking).</td></tr><tr><td><span class='sev' style='background:#c4320a'>HIGH</span></td><td><strong>SSL certificate expires in 9 days</strong><br><span class='muted'>If it lapses, visitors get a security warning.</span></td><td>Renew it and turn on auto-renewal.</td></tr><tr><td><span class='sev' style='background:#475467'>LOW</span></td><td><strong>Site advertises its WordPress version publicly</strong><br><span class='muted'>Showing the exact version makes it easier for automated attacks to pick targets.</span></td><td>Hide the version number (a one-line setting in most security plugins).</td></tr><tr><td><span class='sev' style='background:#475467'>LOW</span></td><td><strong>Missing HSTS security header</strong><br><span class='muted'>Browsers aren&#x27;t told to always use the secure version of the site.</span></td><td>Enable HSTS once HTTPS works everywhere on the site.</td></tr><tr><td><span class='sev' style='background:#475467'>LOW</span></td><td><strong>Basic browser security headers are missing (x-content-type-options, referrer-policy, x-frame-options)</strong><br><span class='muted'>These headers block common tricks like clickjacking and content sniffing.</span></td><td>Add them through the host, a CDN like Cloudflare, or a security plugin.</td></tr></table>
+<p class='cta'>Questions? Reply to <strong>Jordan Sledge</strong> at you@yourdomain.com. I can fix these and keep the site updated, backed up and monitored every month.</p>
+<p class="fine">This check only looked at public information any visitor can see: the homepage, its security
+certificate and public DNS records. No login pages were accessed and no security scanning was performed.
+A full review requires the owner's permission.</p>
+</body></html>

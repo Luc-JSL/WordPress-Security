@@ -1,0 +1,21 @@
+Install these on your own PC (Claude Code). Run in a terminal; each line installs one skill
+globally for Claude Code. Review each skill's SKILL.md first (copies are in the skills/ folder).
+
+npx skills add anthropics/skills@skill-creator -g -a claude-code
+npx skills add anthropics/skills@webapp-testing -g -a claude-code
+npx skills add anthropics/skills@pdf -g -a claude-code
+npx skills add anthropics/skills@xlsx -g -a claude-code
+npx skills add trailofbits/skills@semgrep -g -a claude-code
+npx skills add trailofbits/skills@differential-review -g -a claude-code
+npx skills add trailofbits/skills@supply-chain-risk-auditor -g -a claude-code
+npx skills add trailofbits/skills@fp-check -g -a claude-code
+npx skills add trailofbits/skills@yara-rule-authoring -g -a claude-code
+npx skills add trailofbits/skills@vulnerability-triage-brocards -g -a claude-code
+npx skills add trailofbits/skills@modern-python -g -a claude-code
+
+Extra tools some skills need:
+  semgrep              ->  pip install semgrep
+  yara-rule-authoring  ->  pip install yara-x
+  xlsx (formula recalc) -> LibreOffice (free)
+
+Remove any skill later:  npx skills remove <skill-name> -g
