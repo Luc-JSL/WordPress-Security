@@ -41,6 +41,14 @@ class ParsingTests(unittest.TestCase):
         page = "<script src='/wp-includes/js/wp-emoji-release.min.js?ver=6.5.3'></script>"
         self.assertEqual(sc.find_wp_version(page), ("6.5.3", "core file version (likely)"))
 
+    def test_bundled_library_version_is_not_wordpress(self):
+        jquery = "<script src='https://x.com/wp-includes/js/jquery/jquery.min.js?ver=3.7.1'></script>"
+        self.assertEqual(sc.find_wp_version(jquery), ("", ""))
+        block_css = "<link href='/wp-includes/css/dist/block-library/style.min.css?ver=6.6.2'>"
+        self.assertEqual(sc.find_wp_version(jquery + block_css)[0], "6.6.2")
+        emoji_json = '"concatemoji":"https:\\/\\/x.com\\/wp-includes\\/js\\/wp-emoji-release.min.js?ver=6.6.2"'
+        self.assertEqual(sc.find_wp_version(jquery + emoji_json)[0], "6.6.2")
+
     def test_plugins(self):
         self.assertEqual(sc.find_plugins(WP_PAGE), ["contact-form-7", "woocommerce"])
 

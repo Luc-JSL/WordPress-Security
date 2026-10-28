@@ -144,7 +144,10 @@ def find_wp_version(page: str) -> tuple:
             m = re.search(r'content=["\']WordPress\s*([\d.]+)', tag, flags=re.I)
             if m:
                 return m.group(1), "generator tag"
-    m = re.search(r'/wp-includes/[^"\'\s>]+\?ver=(\d+\.\d+(?:\.\d+)?)', page)
+    # Only core files that carry WordPress's own version. Others in /wp-includes/ carry their library's
+    # version (jquery.min.js?ver=3.7.1 is jQuery 3.7.1, not WordPress 3.7.1).
+    m = re.search(r'wp-includes(?:/|\\/)(?:js(?:/|\\/)wp-emoji-release|css(?:/|\\/)dist(?:/|\\/)block-library'
+                  r'(?:/|\\/)style|css(?:/|\\/)dashicons)(?:\.min)?\.(?:js|css)\?ver=(\d+\.\d+(?:\.\d+)?)', page)
     if m:
         return m.group(1), "core file version (likely)"
     return "", ""
