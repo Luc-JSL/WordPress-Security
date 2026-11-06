@@ -43,6 +43,3 @@ Add `DRY_RUN=1` to see which updates would be applied without applying them.
 - Updates run on staging first when a staging copy exists; the script does not create one, it only refuses to skip the question.
 - Security headers are shipped as server config rather than a plugin, because a plugin can be disabled by the next person who logs in.
 
-## License
-
-MIT. See `LICENSE`.
