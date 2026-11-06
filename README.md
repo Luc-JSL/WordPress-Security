@@ -15,6 +15,7 @@ grow past $2,000/month, and turn a cybersecurity degree into income.
 | [`playbook/`](playbook/) | The 30-day launch playbook (Markdown and PDF), a sample report, and the script that builds the PDF |
 | [`skills/`](skills/) | The 11 Claude Code skills this business uses, why each one, what was checked, and install commands |
 | [`docs/`](docs/) | The business plan: why this idea won, pricing, sales channels, realistic odds and sources |
+| [`care-toolkit/`](care-toolkit/) | What a client gets after they say yes: the onboarding hardening checklist, the monthly maintenance runbook with WP-CLI commands, an incident runbook for a compromised site, the monthly client report template, security-header configs for Apache and nginx, `wp-config.php` hardening constants, and a maintenance script that backs up, updates and verifies core checksums. Runs only on sites you administer. |
 
 ## Quick start
 
